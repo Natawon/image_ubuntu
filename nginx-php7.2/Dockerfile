@@ -9,7 +9,7 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C300EE8C  && \
 echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu xenial main " > /etc/apt/sources.list.d/php.list  && \
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E5267A6C
 
-RUN sed -i -e "s/archive.ubuntu.com/mirror.ku.ac.th/g" /etc/apt/sources.list
+#RUN sed -i -e "s/archive.ubuntu.com/mirror.ku.ac.th/g" /etc/apt/sources.list
 
 
 # install packages
