@@ -16,8 +16,9 @@ RUN sed -i -e "s/archive.ubuntu.com/mirror.ku.ac.th/g" /etc/apt/sources.list
 RUN apt-get update && apt-get -y install apt-utils
 
 RUN apt-get -y --no-install-recommends install \
-curl wget openssh-client wget curl git ffmpeg nano \
-nginx php7.1 php7.1-fpm php7.1-common php7.1-tokenizer php7.1-curl php7.1-gd php7.1-intl php7.1-json php7.1-mbstring php7.1-mcrypt php7.1-mysql php7.1-opcache php7.1-pgsql php7.1-soap php7.1-sqlite3 php7.1-xml php7.1-xmlrpc php7.1-xsl php7.1-zip && \
+curl wget openssh-client wget curl git ffmpeg nano ca-certificates \
+nginx php7.1 php7.1-fpm php7.1-common php7.1-tokenizer php7.1-curl php7.1-gd php7.1-intl php7.1-json php7.1-mbstring php7.1-mcrypt php7.1-mysql php7.1-opcache php7.1-pgsql php7.1-soap php7.1-sqlite3 php7.1-xml php7.1-xmlrpc php7.1-xsl php7.1-zip \
+php-imagick && \
 cp -r /etc/php /etc/php.orig && \
 cp -r /etc/nginx /etc/nginx.orig && \
 apt-get autoclean && apt-get -y autoremove && \
