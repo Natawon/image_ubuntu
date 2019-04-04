@@ -22,6 +22,9 @@ openssh-client \
 git \
 ffmpeg \
 nano \
+sudo \
+npm \
+nodejs \
 ca-certificates \
 nginx \
 php7.1 php7.1-fpm php7.1-common php7.1-tokenizer php7.1-curl php7.1-gd php7.1-intl php7.1-json php7.1-mbstring php7.1-mcrypt php7.1-mysql php7.1-opcache php7.1-pgsql php7.1-soap php7.1-sqlite3 php7.1-xml php7.1-xmlrpc php7.1-xsl php7.1-zip \
@@ -35,6 +38,10 @@ mkdir -p /run/php
 RUN curl -s http://getcomposer.org/installer | php && \
     mv composer.phar /usr/local/bin/composer
 
+RUN apt install nodejs
+
+RUN curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -   
+RUN npm install -g sass   
 # VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx"]
 # # NGINX mountable directory for apps
 # VOLUME ["/var/www"]
