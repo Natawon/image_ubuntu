@@ -40,7 +40,8 @@ RUN curl -s http://getcomposer.org/installer | php && \
 
 RUN apt install nodejs
 
-RUN curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -   
+RUN curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - 
+RUN sudo apt-get install -y nodejs
 RUN npm install -g sass   
 # VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx"]
 # # NGINX mountable directory for apps
