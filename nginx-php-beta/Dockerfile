@@ -1,9 +1,9 @@
-FROM ubuntu:18.04
-MAINTAINER Peerasan Buranasanti <peerasan@gmail.com>
+FROM ubuntu:latest
+LABEL MAINTAINER="Peerasan Buranasanti <peerasan@gmail.com>"
 
 ENV DEBIAN_FRONTEND noninteractive
 
-#RUN sed -i -e "s/archive.ubuntu.com/mirror.ku.ac.th/g" /etc/apt/sources.list
+RUN sed -i -e "s/archive.ubuntu.com/mirror.ku.ac.th/g" /etc/apt/sources.list
 RUN apt-get update && apt-get -y dist-upgrade && apt-get -y install apt-utils curl wget openssh-client git ffmpeg nano ca-certificates software-properties-common
 
 ##Add NGINX official stable repository
@@ -13,10 +13,10 @@ RUN apt-get update && apt-get -y dist-upgrade && apt-get -y install apt-utils cu
 RUN add-apt-repository -y  ppa:ondrej/nginx-mainline; add-apt-repository -y ppa:ondrej/php;
 ##
 ##CAVEATS:
-##1. If you are using php-gearman, you need to add ppa:ondrej/pkg-gearman
-##2. If you are using apache2, you are advised to add ppa:ondrej/apache2
-##3. If you are using nginx, you are advise to add ppa:ondrej/nginx-mainline
-##   or ppa:ondrej/nginx
+## 1. If you are using php-gearman, you need to add ppa:ondrej/pkg-gearman
+## 2. If you are using apache2, you are advised to add ppa:ondrej/apache2
+## 3. If you are using nginx, you are advise to add ppa:ondrej/nginx-mainline
+## or ppa:ondrej/nginx
 ##
 
 # install packages
