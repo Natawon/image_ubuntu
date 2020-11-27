@@ -3,7 +3,7 @@ LABEL MAINTAINER="Peerasan Buranasanti <peerasan@gmail.com>"
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN sed -i -e "s/archive.ubuntu.com/mirror.ku.ac.th/g" /etc/apt/sources.list
+#RUN sed -i -e "s/archive.ubuntu.com/mirror.ku.ac.th/g" /etc/apt/sources.list
 RUN apt-get update && apt-get -y dist-upgrade && apt-get -y install apt-utils curl wget openssh-client git ffmpeg nano ca-certificates software-properties-common
 
 ##Add NGINX official stable repository
