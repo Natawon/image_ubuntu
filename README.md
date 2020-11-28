@@ -3,7 +3,7 @@
 ## Welcome to Minimalist Ubuntu + Nginx + PHP (PHP7, PHP8)
 
 ### All Latest Stable Version
-- Ubuntu: 20.04 LTS
+- Ubuntu: 20.04.1 LTS
 - Nginx: 1.19.0
 - PHP 8.0.0
 
